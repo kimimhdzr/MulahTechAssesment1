@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Verge Headlines</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 2rem; }
+        h1 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 1.2rem; }
+        .timestamp { font-size: 0.9rem; color: #777; }
+    </style>
+</head>
+<body>
+    <h1>The Verge Headlines (Since Jan 1, 2022)</h1>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a href="{{ article.link }}" target="_blank">{{ article.title }}</a><br>
+                <span class="timestamp">{{ article.published }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
